@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main () {
+    int mynum,usernum;
+     mynum = 6;
+
+     printf("I have anumber in my mind. can you guess it?\n");
+while(1){
+     printf("Enter your guess :");
+     scanf("%d",&usernum);
+
+   if(mynum == usernum){
+    printf("You guessed right");break;
+   }
+else if(mynum > usernum){
+   printf("my number is greater than %d.\n",usernum);
+   }
+else{
+printf("my number is smaller than %d.\n",usernum);
+   }break;
+}
+
+time_t currentTime;
+time(&currentTime);
+
+printf("\n%s\n",ctime(&currentTime));
+
+   return 0;
+}
